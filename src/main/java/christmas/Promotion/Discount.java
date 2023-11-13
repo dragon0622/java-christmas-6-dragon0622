@@ -2,5 +2,9 @@ package christmas.Promotion;
 
 public interface Discount {
 
-    int doSale(int originalPrice);
+    void doSale(int visitDate);
+
+    void dosale(String[][] eventMenuArray);
+
+    int getSalePrice();
 }
