@@ -26,9 +26,15 @@ public class OutputView {
         System.out.println("<증정 메뉴>");
     }
 
+    public static void giveawayMessage(String gift, int num) {
+        System.out.println(gift + " " + num + "개");
+    }
+
     public void printAllBenefit(){
         System.out.println("<혜택 내역>");
     }
+
+
 
     public void printTotalBenefitPrice(){
         System.out.println("<총혜택 금액>");
