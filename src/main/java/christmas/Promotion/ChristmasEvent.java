@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Promotion;
 
 public class ChristmasEvent implements Discount{
     private int salePrice = 0;

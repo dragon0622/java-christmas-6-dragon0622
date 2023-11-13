@@ -1,4 +1,4 @@
-package christmas;
+package christmas.View;
 
 public class OutputView {
 

@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Promotion;
 
 public class SpecialEvent implements Discount{
     private static final int SPECIAL_SALE_AMOUNT = 1000;

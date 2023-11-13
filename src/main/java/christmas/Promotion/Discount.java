@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Promotion;
 
 public interface Discount {
 

@@ -1,4 +1,4 @@
-package christmas;
+package christmas.Promotion;
 
 public class WeekdayEvent implements Discount{
     private int salePrice;
