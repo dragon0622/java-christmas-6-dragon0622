@@ -1,4 +1,4 @@
-package christmas.Menu;
+package christmas.domain.Menu;
 
 public enum Appetizer {
     BUTTON_MUSHROOM_SOUP("양송이수프",6000, 0),

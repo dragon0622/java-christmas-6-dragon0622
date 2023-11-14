@@ -1,4 +1,4 @@
-package christmas.Menu;
+package christmas.domain.Menu;
 
 public enum MainDish {
     T_BONE_STEAK("티본스테이크",55000, 0),
