@@ -1,7 +1,9 @@
 package christmas.GiveAway;
 
 public interface GiveAway {
-    boolean doGiveAway(int originalPrice);
+    boolean isGiveAway(int originalPrice);
     String getMenuKorName();
+    String getEventName();
+    int getMenuPrice();
     int getNumberOfMenu();
 }
