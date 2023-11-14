@@ -1,4 +1,4 @@
-package christmas.Promotion;
+package christmas.GiveAway;
 
 public interface GiveAway {
     boolean doGiveAway(int originalPrice);
