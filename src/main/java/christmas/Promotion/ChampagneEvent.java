@@ -1,5 +1,6 @@
 package christmas.Promotion;
 
+import christmas.GiveAway.GiveAway;
 import christmas.Menu.Drink;
 import christmas.View.OutputView;
 
