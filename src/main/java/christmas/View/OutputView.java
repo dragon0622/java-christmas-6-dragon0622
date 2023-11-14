@@ -9,14 +9,14 @@ import java.text.DecimalFormat;
 public class OutputView {
 
     private static final DecimalFormat decimalformat = new DecimalFormat("###,###");
-    public void requestDate(){
+    public static void startMessage(){
         System.out.println("안녕하세요! 우테코 식당 12월 이벤트 플래너입니다.");
     }
 
-    public void eventInformation(int visitDate){
+    public static void eventInformation(int visitDate){
         System.out.println("12월 "+ visitDate +"일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!");
     }
-    public void printMenu(String[][] order){
+    public static void printMenu(String[][] order){
         System.out.println("<주문 메뉴>");
         for (String[] menu : order){
             String name = menu[0];
@@ -25,12 +25,12 @@ public class OutputView {
         }
     }
 
-    public void printBeforeSale(int originalPrice){
+    public static void printBeforeSale(int originalPrice){
         System.out.println("<할인 전 총주문 금액>");
         System.out.println(decimalformat.format(originalPrice) + "원");
     }
 
-    public void printGetFree(){
+    public static void printGetFree(){
         System.out.println("<증정 메뉴>");
     }
 
@@ -38,7 +38,7 @@ public class OutputView {
         System.out.println(giveAwayEvent.getMenuKorName() + " " + giveAwayEvent.getNumberOfMenu() + "개");
     }
 
-    public void printAllBenefit(){
+    public static void printAllBenefit(){
         System.out.println("<혜택 내역>");
     }
 
@@ -52,12 +52,12 @@ public class OutputView {
 
 
 
-    public void printTotalBenefitPrice(int totalBenefitPrice){
+    public static void printTotalBenefitPrice(int totalBenefitPrice){
         System.out.println("<총혜택 금액>");
         System.out.println(decimalformat.format(totalBenefitPrice) + "원");
     }
 
-    public void printEventBadge(){
+    public static void printEventBadge(){
         System.out.println("<12월 이벤트 배지>");
     }
     public static void printBadge(BadgeGrant badgeEvent){
@@ -74,7 +74,7 @@ public class OutputView {
         System.out.println("없음");
     }
 
-    public void printAfterSale(int payPrice){
+    public static void printAfterSale(int payPrice){
         System.out.println("<할인 후 예상 결제 금액>");
         System.out.println(decimalformat.format(payPrice) + "원");
     }
