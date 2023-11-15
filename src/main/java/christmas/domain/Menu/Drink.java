@@ -1,15 +1,15 @@
 package christmas.domain.Menu;
 
-public enum Drink {
-    ZERO_COKE("제로콜라",3000, 0),
-    RED_WINE("레드와인",60000, 0),
-    CHAMPAGNE("샴페인",25000, 0);
+public enum Drink implements Menu{
+    ZERO_COKE("제로콜라",3000),
+    RED_WINE("레드와인",60000),
+    CHAMPAGNE("샴페인",25000);
 
-    String name;
-    int price;
-    int count;
-
-    Drink(String name, int price, int count) {
+    private String name;
+    private int price;
+    Drink(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
     public String getName() {
@@ -20,11 +20,4 @@ public enum Drink {
         return price;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
 }

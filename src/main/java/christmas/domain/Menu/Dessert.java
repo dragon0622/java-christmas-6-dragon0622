@@ -1,14 +1,15 @@
 package christmas.domain.Menu;
 
-public enum Dessert {
-    CHOCOLATE_CAKE("초코케이크",15000, 0),
-    ICE_CREAM("아이스크림",5000, 0);
+public enum Dessert implements Menu{
+    CHOCOLATE_CAKE("초코케이크",15000),
+    ICE_CREAM("아이스크림",5000);
 
     String name;
     int price;
-    int count;
 
-    Dessert(String name, int price, int count) {
+    Dessert(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
     public String getName() {
@@ -19,11 +20,4 @@ public enum Dessert {
         return price;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
 }
