@@ -11,7 +11,7 @@ public class WeekendEvent implements Discount{
     }
 
     @Override
-    public void dosale(String[][] mainMenuArray) {
+    public void doSale(String[][] mainMenuArray) {
         int numberOfMain = 0;
         try{
             for (String count : mainMenuArray[0]){

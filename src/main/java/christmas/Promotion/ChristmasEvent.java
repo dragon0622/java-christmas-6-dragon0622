@@ -13,7 +13,7 @@ public class ChristmasEvent implements Discount{
     }
 
     @Override
-    public void dosale(String[][] eventMenuArray) {
+    public void doSale(String[][] eventMenuArray) {
     }
 
     @Override

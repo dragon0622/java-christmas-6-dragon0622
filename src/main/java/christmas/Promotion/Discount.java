@@ -5,7 +5,7 @@ public interface Discount {
     void doSale();
     void doSale(int visitDate);
 
-    void dosale(String[][] eventMenuArray);
+    void doSale(String[][] eventMenuArray);
 
     String getEventName();
 

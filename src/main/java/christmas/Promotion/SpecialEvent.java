@@ -1,13 +1,13 @@
 package christmas.Promotion;
 
-public class SpecialEvent implements Discount{
+public class SpecialEvent implements Discount {
     private final String EVENT_NAME = "특별 할인";
     private int salePrice;
     private static final int SPECIAL_SALE_AMOUNT = 1000;
 
     @Override
     public void doSale() {
-        salePrice = SPECIAL_SALE_AMOUNT;
+        salePrice = -(SPECIAL_SALE_AMOUNT);
     }
 
     @Override
@@ -15,7 +15,7 @@ public class SpecialEvent implements Discount{
     }
 
     @Override
-    public void dosale(String[][] eventMenuArray) {
+    public void doSale(String[][] eventMenuArray) {
     }
 
     @Override
