@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 public interface Menu {
-    String getKorName();
+    String getName();
     int getPrice();
 
     static Menu[] getAllItems(){
