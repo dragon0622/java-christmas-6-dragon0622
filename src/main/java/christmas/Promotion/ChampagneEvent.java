@@ -1,26 +1,26 @@
 package christmas.Promotion;
 
 import christmas.GiveAway.GiveAway;
-import christmas.Menu.Drink;
-import christmas.View.OutputView;
+import christmas.domain.Menu.Drink;
 
 public class ChampagneEvent implements GiveAway {
     private static final String EVENT_NAME = "";
-    private static final int MINIMUM_ORIGINAL_PRICE = 120000;
-    private static final String GIFT_KOR_NAME = Drink.CHAMPAGNE.getName();
+    private static boolean isApplied = false;
+    private static final String GIFT_NAME = Drink.CHAMPAGNE.getName();
+    private static final int GIFT_PRICE = -(Drink.CHAMPAGNE.getPrice());
     private static final int GIFT_NUM = 1;
 
+
     @Override
-    public boolean isGiveAway(int originalPrice) {
-        if (originalPrice > MINIMUM_ORIGINAL_PRICE){
-            return true;
-        }
-        return false;
+    public void doGiveAway(int originalPrice) {
+        isApplied = true;
     }
+
+    public boolean getIsApplied(){return isApplied;}
 
     @Override
     public String getMenuKorName() {
-        return null;
+        return GIFT_NAME;
     }
 
     @Override
@@ -30,11 +30,11 @@ public class ChampagneEvent implements GiveAway {
 
     @Override
     public int getMenuPrice() {
-        return 0;
+        return GIFT_PRICE;
     }
 
     @Override
     public int getNumberOfMenu() {
-        return 0;
+        return GIFT_NUM;
     }
 }
