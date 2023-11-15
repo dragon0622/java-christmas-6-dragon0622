@@ -69,7 +69,7 @@ class ApplicationTest extends NsTest {
     void 주문_예외_테스트_1() {
         assertSimpleTest(() -> {
             runException("3", "제로콜라-a");
-            assertThat(output()).contains("[ERROR] 메뉴의 개수는 1 이상의 정수여야 합니다.");
+            assertThat(output()).contains("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
         });
     }
 
@@ -96,7 +96,7 @@ class ApplicationTest extends NsTest {
     void 주문_예외_테스트_4() {
         assertSimpleTest(() -> {
             runException("3", "제로콜라-0");
-            assertThat(output()).contains("[ERROR] 메뉴의 개수는 1 이상의 정수여야 합니다.");
+            assertThat(output()).contains("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
         });
     }
 

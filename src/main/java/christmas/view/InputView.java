@@ -52,7 +52,7 @@ public class InputView {
                 }
                 if (countMenu(order) == 0) {
                     order = null;
-                    throw new IllegalArgumentException("메뉴의 개수는 1 이상의 정수여야 합니다.");
+                    throw new IllegalArgumentException("유효하지 않은 주문입니다. 다시 입력해 주세요.");
                 }
                 if (countMenu(order) > 20) {
                     order = null;
