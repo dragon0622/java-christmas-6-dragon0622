@@ -1,10 +1,10 @@
-package christmas;
+package christmas.exception;
 
 public class IllegalArgumentExceptionHandler {
     public IllegalArgumentExceptionHandler(String message) {
-        try{
+        try {
             throw new IllegalArgumentException();
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             System.out.println("[ERROR] " + message);
         }
     }
