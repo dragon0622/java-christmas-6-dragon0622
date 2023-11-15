@@ -64,11 +64,11 @@
 - Exception이 아닌 IllegalArgumentException, IllegalStateException 등과 같은 명확한 유형을 처리한다.
 
 ### 예외 상황
-- [ ] 방문한 날짜가 정수형이 아닐 경우
+- [x] 방문한 날짜가 정수형이 아닐 경우
     - IllegalArgumentException 발생
     - "[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요." 출력
     - 재입력
-- [ ] 방문할 날짜가 1 이상 31 이하의 숫자가 아닐 경우
+- [x] 방문할 날짜가 1 이상 31 이하의 숫자가 아닐 경우
     - IllegalArgumentException 발생
     - "[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요." 출력
     - 재입력
@@ -77,7 +77,7 @@
     - IllegalArgumentException 발생
     - "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." 출력
     - 재입력
-- [ ] 메뉴의 개수가 1 이상의 정수가 아닐 경우
+- [x] 메뉴의 개수가 1 이상의 정수가 아닐 경우
     - IllegalArgumentException 발생
     - "[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요." 출력
     - 재입력
