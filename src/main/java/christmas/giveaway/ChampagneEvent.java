@@ -1,7 +1,6 @@
-package christmas.Promotion;
+package christmas.giveaway;
 
-import christmas.GiveAway.GiveAway;
-import christmas.domain.Menu.Drink;
+import christmas.domain.menu.Drink;
 
 public class ChampagneEvent implements GiveAway {
     private static final String EVENT_NAME = "";
@@ -10,13 +9,15 @@ public class ChampagneEvent implements GiveAway {
     private static final int GIFT_PRICE = -(Drink.CHAMPAGNE.getPrice());
     private static final int GIFT_NUM = 1;
 
-
     @Override
     public void doGiveAway(int originalPrice) {
         isApplied = true;
     }
 
-    public boolean getIsApplied(){return isApplied;}
+    @Override
+    public boolean getIsApplied() {
+        return isApplied;
+    }
 
     @Override
     public String getMenuKorName() {

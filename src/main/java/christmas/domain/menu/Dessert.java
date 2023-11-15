@@ -1,21 +1,23 @@
-package christmas.domain.Menu;
+package christmas.domain.menu;
 
-public enum Drink implements Menu{
-    ZERO_COKE("제로콜라",3000),
-    RED_WINE("레드와인",60000),
-    CHAMPAGNE("샴페인",25000);
+public enum Dessert implements Menu {
+    CHOCOLATE_CAKE("초코케이크", 15000),
+    ICE_CREAM("아이스크림", 5000);
 
     private String name;
     private int price;
-    Drink(String name, int price) {
+
+    Dessert(String name, int price) {
         this.name = name;
         this.price = price;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public int getPrice() {
         return price;
     }

@@ -1,12 +1,12 @@
-package christmas.domain.Menu;
+package christmas.domain.menu;
 
 public enum Appetizer implements Menu {
-    BUTTON_MUSHROOM_SOUP("양송이수프",6000),
-    TAPAS("타파스",5500),
-    CAESAR_SALAD("양송이수프",8000);
+    BUTTON_MUSHROOM_SOUP("양송이수프", 6000),
+    TAPAS("타파스", 5500),
+    CAESAR_SALAD("양송이수프", 8000);
 
-    String name;
-    int price;
+    private String name;
+    private int price;
 
     Appetizer(String name, int price) {
         this.name = name;
@@ -18,6 +18,7 @@ public enum Appetizer implements Menu {
         return name;
     }
 
+    @Override
     public int getPrice() {
         return price;
     }

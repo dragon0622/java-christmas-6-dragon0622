@@ -1,6 +1,6 @@
-package christmas.Promotion;
+package christmas.discount;
 
-public class ChristmasEvent implements Discount{
+public class ChristmasEvent implements Discount {
 
     private final String EVENT_NAME = "크리스마스 디데이 할인";
     private static final int START_SALE_AMOUNT = 1000;
@@ -8,8 +8,12 @@ public class ChristmasEvent implements Discount{
     private int salePrice = 0;
 
     @Override
+    public void doSale() {
+    }
+
+    @Override
     public void doSale(int visitDate) {
-        salePrice = START_SALE_AMOUNT + (visitDate - 1) * INCREASE_SALE_AMOUNT;
+        salePrice = -(START_SALE_AMOUNT + (visitDate - 1) * INCREASE_SALE_AMOUNT);
     }
 
     @Override
@@ -25,9 +29,5 @@ public class ChristmasEvent implements Discount{
     @Override
     public int getSalePrice() {
         return salePrice;
-    }
-
-    @Override
-    public void doSale() {
     }
 }

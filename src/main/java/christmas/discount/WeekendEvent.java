@@ -1,10 +1,10 @@
-package christmas.Promotion;
+package christmas.discount;
 
-import christmas.IllegalArgumentExceptionHandler;
-import christmas.domain.Menu.MainDish;
-import christmas.domain.Menu.Menu;
+import christmas.exception.IllegalArgumentExceptionHandler;
+import christmas.domain.menu.MainDish;
+import christmas.domain.menu.Menu;
 
-public class WeekendEvent implements Discount{
+public class WeekendEvent implements Discount {
     private final String EVENT_NAME = "주말 할인";
     private static final int MAIN_SALE_AMOUNT = 2023;
     private int salePrice;
@@ -22,27 +22,27 @@ public class WeekendEvent implements Discount{
     public void doSale(String[][] order) {
         int numberOfMain = 0;
 
-        for(String[] menus : order){
+        for (String[] menus : order) {
             String name = menus[0];
             String quantity = menus[1];
-            for (Menu menu : Menu.getAllItems()){
+            for (Menu menu : Menu.getAllItems()) {
                 numberOfMain += countMain(name, quantity, menu);
             }
         }
 
-        salePrice = MAIN_SALE_AMOUNT * numberOfMain;
+        salePrice = -(MAIN_SALE_AMOUNT * numberOfMain);
     }
 
     private int countMain(String name, String quantity, Menu menu) {
-        try{
-            if (menu.getName().equals(name)){
-                if (menu instanceof MainDish){
+        try {
+            if (menu.getName().equals(name)) {
+                if (menu instanceof MainDish) {
                     return Integer.parseInt(quantity);
                 }
             }
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             throw new IllegalArgumentException(name + "의 개수가 정수가 아닙니다.");
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             new IllegalArgumentExceptionHandler(e.getMessage());
         }
         return 0;

@@ -1,11 +1,11 @@
 package christmas;
 
-import christmas.View.InputView;
-import christmas.View.OutputView;
+import christmas.view.*;
 
 public class Application {
     public static int VISIT_DATE;
     public static String[][] ORDER;
+
     public static void main(String[] args) {
         OutputView.startMessage();
 

@@ -1,8 +1,9 @@
-package christmas.Promotion;
+package christmas.discount;
 
 public interface Discount {
 
     void doSale();
+
     void doSale(int visitDate);
 
     void doSale(String[][] eventMenuArray);
